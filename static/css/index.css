@@ -396,3 +396,100 @@ strong, b,
     gap: 1rem;
   }
 }
+
+/* =========================================
+   Message / Article Styling
+   ========================================= */
+.message {
+  background-color: transparent;
+}
+
+.message.is-dark .message-body {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+  border-left: 4px solid var(--primary-color); /* Adds the Electric Blue accent */
+  box-shadow: var(--shadow-sm);
+}
+
+/* Ensure strong text inside the message pops */
+.message.is-dark .message-body strong {
+  color: var(--primary-color);
+}
+
+/* =========================================
+   Table Styling (Dark Mode)
+   ========================================= */
+.table {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: var(--border-radius);
+  overflow: hidden; /* Keeps corners rounded */
+}
+
+/* Header and Cell Borders */
+.table th, 
+.table td {
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.table th {
+  color: var(--text-primary) !important; /* 暗い色から明るいオフホワイトに変更 */
+  border-bottom: 2px solid var(--border-color) !important;
+  font-weight: 600; /* 少し太字にして視認性を向上 */
+}
+
+
+/* Striped Rows - alternating dark colors */
+.table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+  background-color: var(--bg-accent);
+}
+
+/* Fix for status tags inside the table */
+.table .tag.is-light {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.table .tag.is-danger.is-light {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+/* 偶数行の背景色（縞模様）も見やすく調整 */
+.table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* 行全体のホバー設定 */
+.table.is-hoverable tbody tr:not(.is-selected):hover {
+  /* 背景：うっすらと青いガラスのような色に */
+  background-color: rgba(59, 130, 246, 0.15) !important;
+
+  /* 発光表現：
+     1. 外側に広がる青い光 (0 0 20px ...)
+     2. 内側に鋭い光のライン (inset 0 0 1px ...) ボーダーのように見せるテクニック
+  */
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.4), 
+    inset 0 0 2px rgba(59, 130, 246, 0.8) !important;
+
+  /* 影（光）を隣の行に隠されないように前面に出す */
+  position: relative;
+  z-index: 5;
+
+  /* アニメーションを滑らかに */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* ホバー時のセル・文字の設定 */
+.table.is-hoverable tbody tr:not(.is-selected):hover td {
+  color: #ffffff !important; /* 真っ白な文字 */
+  
+  /* 文字自体も少しボヤッと光らせる */
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.8);
+  
+  /* セルの境界線も光の色に合わせる */
+  border-color: rgba(59, 130, 246, 0.4) !important;
+}
