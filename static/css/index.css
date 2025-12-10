@@ -17,7 +17,7 @@
   --text-dim: #64748B;
   
   /* Borders & Glass */
-  --border-color: rgba(255, 255, 255, 0.08);
+  --border-color: rgba(255, 255, 255, 0.2);
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.05);
   
