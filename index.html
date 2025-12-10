@@ -215,6 +215,28 @@
       </p>
     </div>
 
+    <div class="content has-text-centered" style="margin: 3rem 0;">
+      <h4 class="title is-5 is-family-code" style="color: var(--accent-color); margin-bottom: 1rem;">
+        <i class="fas fa-microchip"></i> The Zero-Knowledge Workflow
+      </h4>
+      <pre class="zk-workflow"><code>
+<span style="color: var(--text-secondary);">[</span> <span class="zk-highlight">PROVER</span> <span style="color: var(--text-secondary);">]</span>                                        <span style="color: var(--text-secondary);">[</span> <span class="zk-highlight">VERIFIER</span> <span style="color: var(--text-secondary);">]</span>
+   <span style="color: var(--border-color);">|</span>                                                  <span style="color: var(--border-color);">|</span>
+   <span style="color: var(--border-color);">|</span>-- (<span class="zk-highlight-secret">Secret Data</span>)                                  <span style="color: var(--border-color);">|</span>
+   <span style="color: var(--border-color);">|</span>      <span style="font-size: 0.8em; color: var(--text-dim);">+-- Remains Private!</span>                            <span style="color: var(--border-color);">|</span>
+   <span style="color: var(--border-color);">|</span>                                                  <span style="color: var(--border-color);">|</span>
+   <span style="color: var(--border-color);">|</span><span style="color: var(--text-primary);"> Run Proving Computation</span>                          <span style="color: var(--border-color);">|</span>
+   <span style="color: var(--border-color);">|</span>                                                  <span style="color: var(--border-color);">|</span>
+   <span style="color: var(--border-color);">+-----&gt</span> <span style="color: var(--text-secondary);">[</span><span class="zk-highlight-proof">ZK-Proof</span> <span style="color: var(--text-secondary);">]</span> ----------------------------&gt;  <span style="color: var(--border-color);">|</span>
+               <span style="color: var(--text-dim);">(Reveals No Secrets)</span>                   <span style="color: var(--border-color);">|</span>
+                                                      <span style="color: var(--border-color);">|</span>
+                                                      <span style="color: var(--border-color);">|</span> 🔍 <span class="zk-highlight">Verify Proof</span>
+                                                      <span style="color: var(--border-color);">|</span>    <span style="color: var(--text-dim);">(Succinct & Fast)</span>
+                                                      <span style="color: var(--border-color);">|</span>
+   <span style="color: var(--border-color);">&lt;-----------------------------------------</span> <span style="color: var(--text-secondary);">[</span> <span style="color: #4ade80; text-shadow: 0 0 5px #4ade80;">✅ VALID</span> / <span style="color: #f87171; text-shadow: 0 0 5px #f87171;">❌ INVALID</span> <span style="color: var(--text-secondary);">]</span>
+</code></pre>
+    </div>
+
     <div class="columns" style="margin-top: 2rem; margin-bottom: 2rem;">
       
       <div class="column is-6">

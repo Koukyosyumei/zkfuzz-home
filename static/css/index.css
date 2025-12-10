@@ -517,3 +517,67 @@ strong, b,
   letter-spacing: 0.02em;
   box-shadow: 0 0 10px rgba(234, 179, 8, 0.2); /* 全体をほんのり黄色く光らせる */
 }
+
+/* =========================================
+   ZKP Workflow Diagram Styling
+   ========================================= */
+
+/* 図全体のコンテナ（ターミナル風ウィンドウ） */
+.zk-workflow {
+  background: var(--bg-secondary) !important; /* 暗い背景 */
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--border-radius-lg) !important;
+  padding: 3rem 2rem 2rem !important; /* 上部にタイトルバー用の余白 */
+  font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  white-space: pre; /* アスキーアートの崩れを防止 */
+  overflow-x: auto; /* スマホでの横スクロール対応 */
+  box-shadow: var(--shadow-md), inset 0 0 30px rgba(0, 0, 0, 0.3) !important; /* 奥行きのある影 */
+  position: relative;
+  text-align: left; /* 図自体は左寄せ */
+  display: inline-block; /* 中央揃えのためにインラインブロック化 */
+}
+
+/* ターミナルウィンドウの偽装トップバー */
+.zk-workflow::before {
+  content: '● ○ ○  zk_protocol_flow.asc'; /* Mac風のボタンとファイル名 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+  letter-spacing: 0.05em;
+}
+
+/* 図の中の強調キーワード設定 */
+.zk-highlight {
+  color: var(--accent-color); /* シアン（水色） */
+  font-weight: 800;
+  text-shadow: 0 0 8px var(--accent-color); /* 発光エフェクト */
+}
+
+.zk-highlight-secret {
+  color: #f87171; /* 赤色 */
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(248, 113, 113, 0.5);
+}
+
+.zk-highlight-proof {
+  color: var(--primary-color); /* エレクトリックブルー */
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+/* スマホ表示時の調整 */
+@media screen and (max-width: 768px) {
+  .zk-workflow {
+    font-size: 0.7rem; /* フォントを小さくして画面に収まりやすく */
+    padding: 2.5rem 1rem 1rem !important;
+  }
+}
