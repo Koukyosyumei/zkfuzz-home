@@ -395,9 +395,17 @@
       </div>
     </div>
 
+    <div class="container is-max-desktop" style="margin-top: 5rem; margin-bottom: 5rem;">
+      <h3 class="title is-4 has-text-centered" style="margin-bottom: 2rem; display: flex; align-items: center; justify-content: center;">
+        <span class="icon" style="color: var(--accent-color); margin-right: 0.5rem;">
+          <i class="fas fa-book-open"></i>
+        </span>
+        Theoretical Foundation
+      </h3>
+
     <div class="theory-block" style="margin-top: 3rem; margin-bottom: 3rem;">
       <div class="theory-header">
-        <i class="fas fa-book-open"></i> Theoretical Foundation: TCCT
+        <i class="fas fa-book-open"></i> Trace-Constraint Consistency Test (TCCT)
       </div>
       <div class="theory-body">
         
@@ -474,8 +482,57 @@
           </div>
       </div>
     </div>
-  
   </div>
+  </div>
+
+    <div class="container is-max-desktop" style="margin-top: 5rem; margin-bottom: 5rem;">
+      <h3 class="title is-4 has-text-centered" style="margin-bottom: 2rem; display: flex; align-items: center; justify-content: center;">
+        <span class="icon" style="color: var(--accent-color); margin-right: 0.5rem;">
+          <i class="fas fa-network-wired"></i>
+        </span>
+        System Architecture
+      </h3>
+
+      <div class="has-text-centered" style="margin-bottom: 3rem;">
+        <figure class="image system-diagram-box">
+          <img src="static/images/mutation.drawio.svg" alt="zkFuzz System Design" style="width: 100%; height: auto; margin: 0 auto;">
+          <figcaption style="margin-top: 15px; color: var(--text-dim); font-size: 0.9rem;">
+            Figure: Basic workflow of ZKFUZZ. This fuzzing framework systematically mutates program logic and feeds artificially
+generated input data to the original and mutated programs to catch inconsistencies between the program and the constraint.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="content" style="max-width: 800px; margin: 0 auto;">
+        <p>
+          zkFuzz moves beyond traditional input-only fuzzing. It employs a <strong>Joint Mutation Strategy</strong> that evolves both the <em>witness generation logic</em> (<span class="math">&#119979;</span>) and the <em>input data</em> simultaneously.
+        </p>
+
+        <div class="process-list">
+          <div class="process-item">
+            <span class="process-icon"><i class="fas fa-dna"></i></span>
+            <div class="process-text">
+              <strong>1. Mutator Engine</strong>
+              <p>Generates program variants by altering operators and removing assertions to explore deviant behaviors that static analysis might miss.</p>
+            </div>
+          </div>
+          <div class="process-item">
+            <span class="process-icon"><i class="fas fa-vial"></i></span>
+            <div class="process-text">
+              <strong>2. Target Selectors</strong>
+              <p>Strategically guides the fuzzer towards critical edge cases (e.g., Zero-Division, Hash-Check patterns) using static analysis hints.</p>
+            </div>
+          </div>
+          <div class="process-item">
+            <span class="process-icon"><i class="fas fa-search-dollar"></i></span>
+            <div class="process-text">
+              <strong>3. TCCT Detector</strong>
+              <p>Cross-checks execution traces against constraints. Any inconsistency found is immediately flagged as a vulnerability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
 
 <section class="section hero is-light">

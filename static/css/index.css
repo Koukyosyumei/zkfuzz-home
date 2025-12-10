@@ -74,6 +74,15 @@ h1, h2, h3, h4, .title, .publication-title {
   display: none; /* Remove old underline */
 }
 
+.title.is-4 {
+  border-bottom: none !important;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-bottom: 2rem !important;
+}
+
 /* Modern Button - Glowing & Gradient */
 .button {
   background: var(--glass-bg) !important;
@@ -913,4 +922,68 @@ strong, b,
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+}
+
+/* =========================================
+   System Architecture Section
+   ========================================= */
+
+/* Diagram Container */
+.system-diagram-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease;
+  /* 画像がSVGの場合、背景が透明だと見にくいことがあるため、わずかに明るくする */
+  background: radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0) 70%);
+}
+
+.system-diagram-box:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.1); /* シアン色の淡い発光 */
+}
+
+/* Process List (Right Column) */
+.process-list {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.process-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.process-icon {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.process-text strong {
+  color: var(--text-primary);
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.process-text p {
+  color: var(--text-secondary);
+  font-size: 0.9rem !important;
+  margin: 0;
+  line-height: 1.4;
 }
