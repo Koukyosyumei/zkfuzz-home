@@ -543,7 +543,7 @@ generated input data to the original and mutated programs to catch inconsistenci
     <h2 class="title is-3 has-text-centered">Detected Vulnerabilities</h2>
     <div class="content has-text-justified">
       <p>
-        zkFuzz has been tested on 452 real-world circuits and successfully identified <strong>85 unique bugs</strong>, including <strong>59 zero-day vulnerabilities</strong>. Below is a selected list of critical bugs found in popular libraries.
+        This project has identified more than <strong>70 zero-day vulnerabilities</strong>. Below is a selected list of critical bugs found in popular projects and libraries.
       </p>
     </div>
 
@@ -552,6 +552,7 @@ generated input data to the original and mutated programs to catch inconsistenci
         <thead>
           <tr>
             <th>Project / Library</th>
+            <th>ID</th>
             <th>DSL</th>
             <th>Description</th>
             <th>Status</th>
@@ -559,19 +560,43 @@ generated input data to the original and mutated programs to catch inconsistenci
         </thead>
         <tbody>
           <tr>
-            <td><strong>zk-regex</strong></td>
+          <tr>
+            <td><strong>raimo/passport-zk-circuits</strong></td>
+            <td><a href="https://github.com/rarimo/passport-zk-circuits/pull/60">#60</a></td>
+            <td><span class="tag is-danger is-light">Circom</span></td>
+            <td>Missing range checks in division making the circuit non-deterministic.</td>
+            <td><span class="icon has-text-success"><i class="fas fa-check-circle"></i></span> Fixed</td>
+          </tr>
+            <td><strong>worm-privacy/proof-of-burn</strong></td>
+            <td><a href="https://github.com/worm-privacy/proof-of-burn/issues/1">#1</a></td>
+            <td><span class="tag is-danger is-light">Circom</span></td>
+            <td>Missing range checks in balance verification, allowing invalid transactions.</td>
+            <td><span class="icon has-text-success"><i class="fas fa-check-circle"></i></span> Fixed</td>
+          </tr>
+          <tr>
+            <td><strong>aptos-labs/keyless-zk-proofs</strong></td>
+            <td><a href="https://github.com/aptos-labs/keyless-zk-proofs/issues/50">#50</a></td>
+            <td><span class="tag is-danger is-light">Circom</span></td>
+            <td>Unused output making the circuit non-deterministic.</td>
+            <td><span class="icon has-text-success"><i class="fas fa-check-circle"></i></span> Fixed</td>
+          </tr>
+          <tr>
+            <td><strong>siv-org/verifiable-private-overrides</strong></td>
+            <td><a href="https://github.com/siv-org/verifiable-private-overrides/pull/13">#13</a></td>
+            <td><span class="tag is-danger is-light">Circom</span></td>
+            <td>Missing constraint due to <code>&lt;--</code> operator</td>
+            <td><span class="icon has-text-success"><i class="fas fa-check-circle"></i></span> Fixed</td>
+          </tr>
+          <tr>
+            <td><strong>zkemail/zk-regex</strong></td>
+            <td><a href="https://github.com/zkemail/zk-regex/pull/83">#83</a></td>
             <td><span class="tag is-danger is-light">Circom</span></td>
             <td>Missing range checks in regex verification allowing arbitrary string acceptance.</td>
             <td><span class="icon has-text-warning"><i class="fas fa-exclamation-circle"></i></span> Confirmed</td>
           </tr>
           <tr>
-            <td><strong>passport-zk-circuits</strong></td>
-            <td><span class="tag is-danger is-light">Circom</span></td>
-            <td>Missing range checks in division allowing identity forgery.</td>
-            <td><span class="icon has-text-success"><i class="fas fa-check-circle"></i></span> Fixed</td>
-          </tr>
-          <tr>
-            <td><strong>zvm (Tokamak Network)</strong></td>
+            <td><strong><a href="https://github.com/tokamak-network/DEPRECATED-zvm">tokamak-network/zvm</a></strong></td>
+            <td>-</td>
             <td><span class="tag is-danger is-light">Circom</span></td>
             <td>Misuse of <code>assert</code> causing computation aborts not constrained in the circuit.</td>
             <td><span class="icon has-text-warning"><i class="fas fa-exclamation-circle"></i></span> Confirmed</td>
