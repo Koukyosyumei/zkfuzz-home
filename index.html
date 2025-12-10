@@ -178,7 +178,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Overview</h2>
+        <h2 class="title is-3">Securing the Zero-Knowledge Future</h2>
         <div class="content has-text-justified">
           <p>
             Zero-Knowledge Proofs (ZKPs) enable privacy-preserving computations and serve as a cornerstone for trustless systems. This project conducts research on both the theoretical foundations and practical implementations of effective fuzzers and verifiers to ensure the security of these systems.
@@ -189,6 +189,41 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">What are Zero-Knowledge Proofs?</h2>
+        <div class="content has-text-justified">
+          <p>
+            Imagine being able to prove to a bouncer that you are over 21 years old, without handing over your ID card or revealing your actual birth date.
+          </p>
+          <p>
+            <strong>Zero-Knowledge Proofs (ZKPs)</strong> allow one party (the <em>Prover</em>) to prove to another (the <em>Verifier</em>) that a statement is true, without revealing any information beyond the validity of the statement itself.
+          </p>
+          
+          <div class="columns is-vcentered" style="margin-top: 20px;">
+            <div class="column is-6">
+              <h4 class="title is-5"><i class="fas fa-shield-alt"></i> Privacy</h4>
+              <p>
+                Users can verify computations (like a bank transfer) without exposing sensitive data (like the account balance or sender identity) on a public blockchain.
+              </p>
+            </div>
+            <div class="column is-6">
+              <h4 class="title is-5"><i class="fas fa-expand-arrows-alt"></i> Scalability</h4>
+              <p>
+                Complex computations can be performed off-chain. The blockchain only needs to verify the tiny ZK proof, which is exponentially faster and cheaper than re-running the computation.
+              </p>
+            </div>
+          </div>
+
+          <article class="message is-dark">
+            <div class="message-body">
+              <strong>The Security Challenge:</strong> While the cryptography behind ZKPs is robust, the <em>circuits</em> (the code written by developers) are prone to bugs. If a circuit is "under-constrained," it might allow a Prover to generate a valid proof for a false statement. <strong>This is exactly what zkFuzz is designed to detect.</strong>
+            </div>
+          </article>
+        </div>
   </div>
 </section>
 
