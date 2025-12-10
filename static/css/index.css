@@ -581,3 +581,140 @@ strong, b,
     padding: 2.5rem 1rem 1rem !important;
   }
 }
+
+/* =========================================
+   Feature Cards (What is zkFuzz)
+   ========================================= */
+.feature-card {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--border-radius-lg) !important;
+  padding: 2rem !important;
+  height: 100%; /* 高さを揃える */
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+}
+
+/* アイコンの背景 */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(139,92,246,0.1) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
+}
+
+.feature-card:hover .icon-box {
+  background: var(--gradient-primary);
+  color: #fff;
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* =========================================
+   Terminal / Mockup Window
+   ========================================= */
+.mockup-window {
+  background: #1e1e1e; /* ターミナルの背景色（VSCode風） */
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  text-align: left;
+  position: relative;
+}
+
+.mockup-header {
+  background: #2d2d2d;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.mockup-title {
+  margin-left: 1rem;
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+.dot.green { background-color: #27c93f; }
+
+.mockup-content {
+  padding: 1.5rem;
+  color: #d4d4d4;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.mockup-content pre {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+.mockup-content pre::before {
+  display: none; /* 既存のCSSの偽装ドットを消す */
+}
+
+/* Command Styles */
+.cmd-prompt {
+  color: #5af;
+  margin-right: 0.5rem;
+  user-select: none;
+}
+
+.cmd-output {
+  color: #a0a0a0;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.cmd-output.is-success {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+/* Copy Button inside Terminal */
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.copy-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
