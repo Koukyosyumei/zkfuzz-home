@@ -332,7 +332,6 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    
     <h2 class="title is-3 has-text-centered">What is zkFuzz?</h2>
     <div class="content" style="margin-bottom: 3rem;">
       <p class="is-size-5">
@@ -349,19 +348,19 @@
           </div>
           <h4 class="title is-5">Mutation-Based Fuzzing</h4>
           <p>
-            Unlike static analysis, zkFuzz actively <strong>mutates</strong> the witness generation logic and injects edge-case inputs to trigger hidden vulnerabilities dynamically.
+            Unlike static analysis and formal verification tools, zkFuzz actively <strong>mutates</strong> the witness generation logic and injects edge-case inputs to trigger hidden vulnerabilities dynamically.
           </p>
         </div>
       </div>
 
-      <div class="column is-5-desktop is-6-tablet">
+<div class="column is-5-desktop is-6-tablet">
         <div class="box feature-card">
           <div class="icon-box">
             <i class="fas fa-balance-scale"></i>
           </div>
-          <h4 class="title is-5">Unified Detection</h4>
+          <h4 class="title is-5">Unified Formulation via TCCT</h4>
           <p>
-            A unified framework that detects both <strong>Under-constrained</strong> (safety) and <strong>Over-constrained</strong> (liveness) bugs simultaneously using our novel consistency checks.
+            <strong>TCCT</strong> is the first theoretical model defining bugs as <strong>computation-constraint inconsistencies</strong>. This unified framework captures both <strong>soundness</strong> and <strong>completeness</strong> errors, surpassing prior theoretical definitions.
           </p>
         </div>
       </div>
@@ -388,11 +387,9 @@
 
             <pre><code><span class="cmd-prompt">$</span> git clone https://github.com/Koukyosyumei/zkFuzz.git
 <span class="cmd-output">Cloning into 'zkFuzz'...</span>
-
-<span class="cmd-prompt">$</span> cd zkFuzz && cargo build --release
+<span class="cmd-prompt">$</span> cd zkFuzz && cargo install --path ./
 <span class="cmd-output">Finished release [optimized] target(s) in 1.2s</span>
-
-<span class="cmd-prompt">$</span> zkfuzz target.circom            
+<span class="cmd-prompt">$</span> zkfuzz target.circom     
             <div style="margin-top: 1.5rem; border: 1px solid var(--border-color); border-radius: 4px; overflow: hidden; opacity: 0.8;">
                <img src="static/images/zkfuzz-cli-example-usage.gif" alt="zkFuzz CLI Usage" style="width: 100%; display: block;"> 
             </div>
@@ -403,36 +400,6 @@
 
   </div>
 </section>
-
-<section class="section hero">
-  <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">What is zkFuzz?</h2>
-        <div class="content has-text-justified">
-          <p>
-            <strong>zkFuzz</strong> is a novel mutation-based fuzzing framework designed to detect vulnerabilities in Zero-Knowledge (ZK) circuits. It automates the detection of soundness and completeness bugs that traditional static analyzers often miss.
-          </p>
-
-          <h4 class="title is-5">Core Technologies</h4>
-          <ul>
-            <li><strong>Trace-Constraint Consistency Test (TCCT):</strong> A language-independent formulation that captures both under-constrained (soundness) and over-constrained (completeness) vulnerabilities by analyzing the discrepancy between execution traces and circuit constraints.</li>
-            <li><strong>Mutation-Based Fuzzing:</strong> systematically mutates the witness generation logic and injects various inputs to uncover hidden bugs without requiring manual specifications.</li>
-          </ul>
-
-          <h4 class="title is-5">Installation</h4>
-          <p>You can easily install zkFuzz via git. Ensure you have <code>Rust</code> installed.</p>
-          <pre><code class="language-bash">git clone https://github.com/Koukyosyumei/zkFuzz.git
-cd zkFuzz
-cargo build --release</code></pre>
-	  <br>
-
-	  <h4 class="title is-5">Usage</h4>
-	  <p>Run <strong>zkFuzz</strong> using your circuit file written in Circom:</p>
-	  <pre><code class="language-bash">zkfuzz ./tests/sample/iszero_vuln.circom</code></pre>
-    <img src="static/images/zkfuzz-cli-example-usage.gif">
-        </div>
-  </div>
-</section>
-
 
 <section class="section hero is-light">
   <div class="container is-max-desktop">
