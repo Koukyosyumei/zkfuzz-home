@@ -222,12 +222,12 @@
       <pre class="zk-workflow"><code>
 <span style="color: var(--text-secondary);">[</span> <span class="zk-highlight">PROVER</span> <span style="color: var(--text-secondary);">]</span>                                        <span style="color: var(--text-secondary);">[</span> <span class="zk-highlight">VERIFIER</span> <span style="color: var(--text-secondary);">]</span>
    <span style="color: var(--border-color);">|</span>                                                  <span style="color: var(--border-color);">|</span>
-   <span style="color: var(--border-color);">|</span>-- (<span class="zk-highlight-secret">Secret Data</span>)                                  <span style="color: var(--border-color);">|</span>
-   <span style="color: var(--border-color);">|</span>      <span style="font-size: 0.8em; color: var(--text-dim);">+-- Remains Private!</span>                            <span style="color: var(--border-color);">|</span>
+   <span style="color: var(--border-color);">|</span>-- [<span class="zk-highlight-secret">Secret Data</span>]                                  <span style="color: var(--border-color);">|</span>
+   <span style="color: var(--border-color);">|</span>      <span style="color: var(--text-dim);">  (Remains Private!)</span>                        <span style="color: var(--border-color);">|</span>
    <span style="color: var(--border-color);">|</span>                                                  <span style="color: var(--border-color);">|</span>
    <span style="color: var(--border-color);">|</span><span style="color: var(--text-primary);"> Run Proving Computation</span>                          <span style="color: var(--border-color);">|</span>
    <span style="color: var(--border-color);">|</span>                                                  <span style="color: var(--border-color);">|</span>
-   <span style="color: var(--border-color);">+-----&gt</span> <span style="color: var(--text-secondary);">[</span><span class="zk-highlight-proof">ZK-Proof</span> <span style="color: var(--text-secondary);">]</span> ----------------------------&gt;  <span style="color: var(--border-color);">|</span>
+   <span style="color: var(--border-color);">+-----&gt</span> <span style="color: var(--text-secondary);"></span><span class="zk-highlight-proof">[ZK-Proof]</span><span style="color: var(--text-secondary);"></span> -----------------------------&gt;  <span style="color: var(--border-color);">|</span>
                <span style="color: var(--text-dim);">(Reveals No Secrets)</span>                   <span style="color: var(--border-color);">|</span>
                                                       <span style="color: var(--border-color);">|</span>
                                                       <span style="color: var(--border-color);">|</span> 🔍 <span class="zk-highlight">Verify Proof</span>
@@ -303,7 +303,6 @@
         </div>
       </div>
     </article>
-    
   </div>
 </section>
 
@@ -353,7 +352,7 @@
         </div>
       </div>
 
-<div class="column is-5-desktop is-6-tablet">
+      <div class="column is-5-desktop is-6-tablet">
         <div class="box feature-card">
           <div class="icon-box">
             <i class="fas fa-balance-scale"></i>
@@ -372,7 +371,6 @@
         <h4 class="title is-5 has-text-centered is-family-code" style="margin-bottom: 1.5rem;">
           <i class="fas fa-terminal"></i> Get Started in Seconds
         </h4>
-        
         <div class="mockup-window">
           <div class="mockup-header">
             <span class="dot red"></span>
@@ -384,12 +382,11 @@
             <button class="copy-btn" onclick="navigator.clipboard.writeText('git clone https://github.com/Koukyosyumei/zkFuzz.git && cd zkFuzz && cargo build --release')">
               <i class="far fa-copy"></i>
             </button>
-
             <pre><code><span class="cmd-prompt">$</span> git clone https://github.com/Koukyosyumei/zkFuzz.git
 <span class="cmd-output">Cloning into 'zkFuzz'...</span>
 <span class="cmd-prompt">$</span> cd zkFuzz && cargo install --path ./
 <span class="cmd-output">Finished release [optimized] target(s) in 1.2s</span>
-<span class="cmd-prompt">$</span> zkfuzz target.circom     
+<span class="cmd-prompt">$</span> zkfuzz target.circom</code></pre>
             <div style="margin-top: 1.5rem; border: 1px solid var(--border-color); border-radius: 4px; overflow: hidden; opacity: 0.8;">
                <img src="static/images/zkfuzz-cli-example-usage.gif" alt="zkFuzz CLI Usage" style="width: 100%; display: block;"> 
             </div>
@@ -397,7 +394,7 @@
         </div>
       </div>
     </div>
-
+  
   </div>
 </section>
 
