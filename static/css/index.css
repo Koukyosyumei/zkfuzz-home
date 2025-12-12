@@ -1202,8 +1202,7 @@ strong, b,
   overflow-x: scroll;
   /*overflow-x: auto; /* 横スクロールを有効化 */
   -webkit-overflow-scrolling: touch; /* iOSでのスクロールを滑らかに */
-  width: 100%;           /* 幅は親要素いっぱいまで */
-  max-width: 100%;       /* 【重要】画面幅（親要素）を超えて広がらないように制限する */
+  width: 95vw !important;
   
   /* スクロールバーのカスタマイズ (Webkit系: Chrome, Safari) */
   scrollbar-width: thin; /* Firefox用: 細くする */
