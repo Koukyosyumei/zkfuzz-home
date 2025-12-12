@@ -586,6 +586,7 @@ strong, b,
 /* スマホ表示時の調整 */
 @media screen and (max-width: 768px) {
   .zk-workflow {
+    width: 100% !important;
     font-size: 0.7rem; /* フォントを小さくして画面に収まりやすく */
     padding: 2.5rem 1rem 1rem !important;
   }
