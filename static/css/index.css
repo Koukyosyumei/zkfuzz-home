@@ -196,6 +196,11 @@ pre {
   padding-top: 2.5rem !important; /* Space for fake window dots */
 }
 
+.bibtex-code {
+  width: 70% !important;
+  overflow-x: auto; /* スマホでの横スクロール対応 */
+}
+
 /* Fake Terminal Window Dots */
 pre::before {
   content: '•••';
