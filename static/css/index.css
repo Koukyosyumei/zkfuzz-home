@@ -1198,12 +1198,13 @@ strong, b,
 
 /* 1. テーブルコンテナのスクロールバーをスタイリッシュにする */
 .table-container {
-  overflow-x: auto; /* 横スクロールを有効化 */
+  overflow-x: scroll;
+  /*overflow-x: auto; /* 横スクロールを有効化 */
   -webkit-overflow-scrolling: touch; /* iOSでのスクロールを滑らかに */
   margin-bottom: 2rem;
   
   /* スクロールバーのカスタマイズ (Webkit系: Chrome, Safari) */
-  scrollbar-width: thin; /* Firefox用: 細くする */
+  /*scrollbar-width: thin; /* Firefox用: 細くする */
   scrollbar-color: var(--primary-color) var(--bg-secondary); /* Firefox用 */
 }
 
