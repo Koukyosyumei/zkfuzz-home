@@ -156,11 +156,11 @@
   Generate input data <span style="color: #9cdcfe;">x</span>
   Mutate <span style="color: #9cdcfe;">P</span> to <span style="color: #9cdcfe;">P'</span>
   
-  <span style="color: #6a9955;">// 2. Differential Execution</span>
+  <span style="color: #6a9955;">// 2. Execution</span>
   Execute both <span style="color: #9cdcfe;">P</span> and <span style="color: #9cdcfe;">P'</span> on <span style="color: #9cdcfe;">x</span>:
   <span style="color: #9cdcfe;">P(x)</span> = (<span style="color: #9cdcfe;">z</span>, <span style="color: #9cdcfe;">y</span>), <span style="color: #9cdcfe;">P'(x)</span> = (<span style="color: #9cdcfe;">z'</span>, <span style="color: #9cdcfe;">y'</span>)
 
-  <span style="color: #6a9955;">// 3. Oracle Checks (TCCT)</span>
+  <span style="color: #6a9955;">// 3. Trace-Constraint Consistency Test (TCCT)</span>
   <span style="color: #c586c0;">if</span> <span style="color: #9cdcfe;">y</span> ≠ ⊥ <span style="color: #569cd6;">and</span> <span style="color: #dcdcaa;">C</span>(<span style="color: #9cdcfe;">x</span>, <span style="color: #9cdcfe;">z</span>, <span style="color: #9cdcfe;">y</span>) = <span style="color: #569cd6;">false</span> <span style="color: #c586c0;">then</span>
     <span style="color: #ce9178;">Report "Over-Constrained Problem"</span>
 
